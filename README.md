@@ -7,5 +7,4 @@ Nesta landing page, construi uma pagina para uma empresa de transportes. O site 
 ![Alt text](Screenshots/05.png?raw=true  "five Page")
 ![Alt text](Screenshots/06.png?raw=true  "six Page")
 ![Alt text](Screenshots/07.png?raw=true  "seven Page")
-![Alt text](Screenshots/08.png?raw=true  "eight Page")
 
