@@ -1,0 +1,305 @@
+.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ul li a {
+  text-decoration: none;
+}
+
+/* div img permite que a imagem seja reduzida na sua proporcao original
+responsiva */
+div img {
+  display: block;
+  width: 100%;
+}
+.flex-container {
+  display: flex;
+  max-width: 992px;
+  margin: auto;
+  width: 100%;
+  min-width: 320px;
+  /* padding: 10px 15px; */
+}
+header {
+  background-color: #122a57;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+header .list-items {
+  display: flex;
+  max-width: 260px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-items li a {
+  color: #fff;
+}
+
+header .menu {
+  justify-content: space-between;
+}
+
+.apresentacao {
+  /* o padrao era heignt 100vh */
+  height: 50vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.apresentacao .texto-apresentacao {
+  min-height: 200px;
+}
+.texto-apresentacao h1 {
+  color: #122a57;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #122a57;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  width: 220px;
+  display: block;
+  text-decoration-line: none;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#quem-somos {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#quem-somos h2 {
+  font-size: 32px;
+  color: #122a57;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#quem-somos h2::before {
+  /* o content vazio cria a barrinha de marcacao antes da palavra */
+  content: "";
+  height: 50px;
+  width: 5px;
+  margin-right: 5px;
+  background-color: #122a57;
+  position: relative;
+}
+
+#quem-somos p {
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+#quem-somos img {
+  min-width: 420px;
+}
+
+.container-externo {
+  background-color: #122a57;
+  width: 100%;
+}
+
+/* Servicos esta com a hastag porque é um id, esta ao lado classe flex-container */
+#servicos {
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#servicos h2 {
+  color: white;
+  font-size: 32px;
+  /* padrao margin botton 20px */
+  margin-bottom: 50px;
+  /* padroa estava sem margin left */
+  margin-left: 10px;
+  
+}
+.list-servicos {
+  display: flex;
+  /* o sapce-around cria um espaco entre os elementos */
+  justify-content: space-between;
+}
+.list-servicos .item-servico {
+  text-align: center;
+}
+
+/* o item servico conta com um elemento de link */
+/* vamos passar algumas configuracoes para ele ficar com um fundo arredendado */
+.item-servico a {
+  width: 220px;
+  background-color: white;
+  border-radius: 30px;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 50px;
+  /* esse paddding ira espacar as palavras do borderradius */
+  padding: 5px 10px;
+  color: #122a57;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.item-servico p {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+}
+
+.item-servico img {
+  width: 80%;
+  margin: auto;
+}
+
+#planos {
+  /* gerou um espaco entre a list de planos e o h2 planos */
+  flex-direction: column;
+  /* padrao era min-heignth de 100 */
+  min-height: 50vh;
+  padding-top: 50px;
+}
+#planos h2 {
+  font-size: 32px;
+}
+
+.list-plano {
+  /* todos os itens-planos fiquem um ao lado do outro */
+  display: flex;
+  /* permitira que os itens sejam alinhados de baixo para cima */
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.item-planos {
+  /* o flex 1 preenche a tela com os itens */
+  flex: 1;
+  border: 5px solid #122a57;
+  /* a margin rigth distancia as  */
+  margin-right: 20px;
+  padding: 10px;
+  max-width: 240px;
+  /* margin-bottom: 20px; */
+}
+.item-planos .btn {
+  /* A margin auto coloca o botao ao centro */
+  margin: auto;
+  /*  a margin botton desenocosta o botton da parte inferior */
+  margin-bottom: 20px;
+}
+
+/* preparacao para o pseudo elemento planos*/
+.item-planos h3 {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+}
+/* pseudo elemento */
+.item-planos h3::after {
+  content: "";
+  background-color: #122a57;
+  width: 100%;
+  height: 3px;
+  /* essa margin distancia o pseudoelemento do texto h3 */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* personalizando os ul e li */
+.item-planos ul {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.item-planos ul li {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* criando pseudomarcador os ul e li */
+.item-planos ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #122a57;
+  margin-right: 5px;
+}
+.footer {
+  background-color: #122a57;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer {
+  justify-content: space-between;
+  color: white;
+}
+
+/* mobile, vamos lidar com algumas break pointes especificos para nossa tela */
+/* mediaquerys */
+@media (max-width: 992px) {
+  /* vamos trabalhar com a classe principal o flex container */
+  .flex-container {
+    flex-direction: column;
+  }
+  .apresentacao {
+    flex-direction: column-reverse;
+  }
+  .apresentacao .texto-apresentacao {
+    width: 100%;
+  }
+  #quem-somos{
+      flex-direction: column-reverse;
+  }
+
+  /* adicionamos essa propriedade para corportar em algumas telas menores */
+  #quem-somos img{
+      min-width: 320px;
+      margin: auto;
+
+
+  }
+  .list-servicos{
+      flex-direction: column;
+  }
+  .item-servico img{
+      /* essas propriedas reduzem as imagens quando elas mudarem o flex direction para 
+      coluna */
+      width: 50%;
+      margin: auto;
+      align-items: center;
+
+  }
+  .list-plano{
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  /* Com essa propriedade, assim que a tela for resuzida, as bordas do item plano
+  passarao a possuir o tamanho dos itens servicos */
+  .list-plano .item-planos{
+      max-width: 90%;
+      margin: auto;
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
